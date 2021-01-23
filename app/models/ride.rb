@@ -1,7 +1,4 @@
-class Ride < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :attraction
-
+class Ride < ApplicationRecord
   belongs_to :user
   belongs_to :attraction
 
@@ -20,6 +17,7 @@ class Ride < ActiveRecord::Base
 
   def check_if_user_meets_the_requirements
     user_has_enough_tickets, user_is_tall_enough = false
+    # binding.pry
     if self.user.tickets >= self.attraction.tickets
       user_has_enough_tickets = true
     end
