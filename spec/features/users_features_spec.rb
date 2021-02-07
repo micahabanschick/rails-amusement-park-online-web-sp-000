@@ -28,7 +28,11 @@ describe 'Feature Test: User Signup', :type => :feature do
     # binding.pry
     create_standard_user
     visit '/signin'
+<<<<<<< HEAD
     # binding.pry
+=======
+    binding.pry
+>>>>>>> bffedb5336127e47bcb84fd78fab069dc43bc690
     expect(current_path).to eq('/signin')
 
     user_login
